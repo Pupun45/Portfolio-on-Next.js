@@ -3,7 +3,7 @@
 A modern, responsive, and animated personal portfolio website built with Next.js, React, Tailwind CSS, and Framer Motion.
 
 ## 🚀 Live Demo
--------------------- https://portfolio-jrb.vercel.app ---------------
+-------------------- https://portfolio-jrb.vercel.app --------------
 
 ## ✨ Features
 * **Modern UI/UX:** Clean, elegant design with glassmorphism effects and dark mode aesthetics.
