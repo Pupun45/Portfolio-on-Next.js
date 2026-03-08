@@ -15,6 +15,7 @@ const navLinks = [
   { name: "Experience", href: "/experience" },
   { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
+  { name: "Resume", href: "/resume" },
 ];
 
 export default function Navbar() {
@@ -65,18 +66,12 @@ export default function Navbar() {
                     {isActive && (
                       <>
                         <motion.div
-                          layoutId="activeWalker"
-                          className="absolute -top-5 left-0 right-0 flex justify-center pointer-events-none"
+                          layoutId="activeDot"
+                          className="absolute -top-3 left-0 right-0 flex justify-center pointer-events-none"
                           initial={false}
                           transition={{ type: "spring", stiffness: 500, damping: 35 }}
                         >
-                          <motion.span
-                            animate={{ rotate: [-10, 10, -10], y: [0, -2, 0] }}
-                            transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
-                            className="text-xl"
-                          >
-                            🚶‍♂️
-                          </motion.span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-foreground block" />
                         </motion.div>
                         <motion.div
                           layoutId="activeLine"
@@ -144,7 +139,6 @@ export default function Navbar() {
                   )}
                   onClick={() => setIsOpen(false)}
                 >
-                  {isActive && <span>🚶‍♂️</span>}
                   {link.name}
                 </Link>
               );

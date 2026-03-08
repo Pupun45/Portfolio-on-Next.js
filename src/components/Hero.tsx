@@ -11,11 +11,12 @@ import {
   SiTailwindcss,
   SiTypescript
 } from "react-icons/si";
+import profile from "../../public/jyoti.jpg";
 
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-background pt-20">
-      
+
       {/* Background Gradients */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
@@ -29,27 +30,24 @@ export default function Hero() {
       />
 
       <div className="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16 max-w-6xl">
-        
+
         {/* Left Content */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-          
-          {/* Walking Animation Emoji */}
+
+          {/* Available Badge */}
           <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="mb-8 overflow-hidden inline-block"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-foreground/10 bg-foreground/5 backdrop-blur-sm"
           >
-             <motion.div
-               animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
-               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-               className="text-6xl"
-             >
-               🚶‍♂️
-             </motion.div>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+            </span>
+            <span className="text-sm font-medium text-foreground/70">Available for work</span>
           </motion.div>
 
-          {/* Intro Text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,13 +57,13 @@ export default function Hero() {
               Hello, I'm
             </h2>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-foreground">
-              Jyotiranjan Behera
+              Jyoti Ranjan Behera
             </h1>
             <h3 className="text-2xl md:text-3xl font-medium text-foreground/80 mb-6">
-              MERN Stack Developer
+              Web Developer · MERN Stack
             </h3>
             <p className="text-lg text-foreground/60 max-w-xl font-light leading-relaxed mb-10">
-              I build scalable, modern web applications with a focus on premium aesthetics and robust architecture.
+              Seeking to grow professionally as a Full Stack Developer — building scalable, responsive web applications using the MERN stack.
             </p>
           </motion.div>
 
@@ -103,12 +101,12 @@ export default function Hero() {
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-[2rem] overflow-hidden bg-foreground/5 p-4 backdrop-blur-sm border border-foreground/10 mb-12">
             <div className="w-full h-full rounded-3xl overflow-hidden relative">
               <img
-                src="/images/profile.jpg"
-                alt="Jyotiranjan Behera"
+                src="/jyoti.jpg"
+                alt="Jyoti Ranjan Behera"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src =
-                    "https://ui-avatars.com/api/?name=Jyotiranjan+Behera&size=512&background=0D8ABC&color=fff";
+                    "https://ui-avatars.com/api/?name=Jyoti+Ranjan+Behera&size=512&background=0D8ABC&color=fff";
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
